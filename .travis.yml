@@ -23,4 +23,4 @@ install:
   - conda install numpy mbuild pytest nbval
 
 script:
-  - python -m pytest -v --nbval --nbval-lax --cov=mbuild --cov-report= --pyargs mbuild
+  - python -m pytest -v --nbval --nbval-lax
