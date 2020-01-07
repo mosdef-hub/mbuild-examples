@@ -33,9 +33,3 @@ if __name__ == '__main__':
 
     united_atom = mb.coarse_grain(hexane_box, particle_classes=united_atom_particles)
     three_to_one = mb.coarse_grain(hexane_box, particle_classes=three_to_one_particles)
-
-    # print("Proxy: {}".format(proxy))
-    #
-    # print("Leaves of the proxy:")
-    # for i, leaf in enumerate(proxy.particles()):
-    #     print("{}: {}".format(i, leaf))
