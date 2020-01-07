@@ -20,7 +20,7 @@ install:
   - conda config --add channels mosdef
   - conda create -n test-environment python=$PYTHON_VERSION
   - source activate test-environment
-  - conda install numpy mbuild
+  - conda install numpy mbuild pytest nbval
 
 script:
   - python -m pytest -v --nbval --nbval-lax --cov=mbuild --cov-report= --pyargs mbuild
