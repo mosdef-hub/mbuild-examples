@@ -4,8 +4,8 @@ import mbuild as mb
 
 from mbuild.lib.moieties import Silane
 from mbuild.lib.moieties import CH3
-from mbuild.examples.pmpc.mpc import MPC
-from mbuild.examples.pmpc.initiator import Initiator
+from mpc import MPC
+from initiator import Initiator
 
 
 class Brush(mb.Compound):
@@ -28,6 +28,5 @@ class Brush(mb.Compound):
         self.add(self['silane']['down'], label='down', containment=False)
 
 if __name__ == "__main__":
-    #pmpc = Brush(chain_length=1, alpha=pi/4)
     pmpc = Brush()
     print(pmpc)

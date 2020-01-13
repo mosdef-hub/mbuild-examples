@@ -1,7 +1,5 @@
-# -- ==alkylsilane== --
 import mbuild as mb
 
-from mbuild.examples.alkane.alkane import Alkane
 from mbuild.lib.moieties import Silane
 
 
@@ -10,7 +8,7 @@ class AlkylSilane(mb.Compound):
     def __init__(self, chain_length):
         super(AlkylSilane, self).__init__()
 
-        alkane = Alkane(chain_length, cap_end=False)
+        alkane = mb.recipes.Alkane(chain_length, cap_end=False)
         self.add(alkane, 'alkane')
         silane = Silane()
         self.add(silane, 'silane')
@@ -18,5 +16,3 @@ class AlkylSilane(mb.Compound):
 
         # Hoist silane port to AlkylSilane level.
         self.add(silane['down'], 'down', containment=False)
-
-# -- ==alkylsilane== --

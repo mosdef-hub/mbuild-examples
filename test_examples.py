@@ -12,12 +12,12 @@ from jupyter_client import KernelManager
 import nbformat
 import pytest
 
-
+ROOT = os.getcwd()
 NOTEBOOKS = [f for f in glob.glob('*/*.ipynb')]
-print(NOTEBOOKS)
 
 @pytest.mark.parametrize("filepath", NOTEBOOKS)
 def test_examples(filepath):
+    os.chdir(ROOT)
     check_one_notebook(filepath)
 
 

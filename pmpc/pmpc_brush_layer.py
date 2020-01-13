@@ -1,15 +1,9 @@
-# -*- coding: utf-8 -*-
-
-
-# -- ==pmpc_brush_layer== --
-from __future__ import division
-
 from numpy import pi
 
 import mbuild as mb
 from mbuild.lib.atoms import H
 from mbuild.lib.surfaces import Betacristobalite
-from mbuild.examples.pmpc.brush import Brush
+from pmpc.brush import Brush
 
 
 class PMPCLayer(mb.lib.recipes.Monolayer):
@@ -21,5 +15,3 @@ class PMPCLayer(mb.lib.recipes.Monolayer):
         super(PMPCLayer, self).__init__(surface, brush, backfill=hydrogen,
                                         pattern=pattern, tile_x=tile_x,
                                         tile_y=tile_y)
-
-# -- ==pmpc_brush_layer== --
