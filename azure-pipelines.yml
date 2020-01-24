@@ -60,7 +60,7 @@ jobs:
       - bash: |
           source activate test-environment
           pip install pytest-azurepipelines
-          python -m pytest -v --nbval --nbval-lax --pyargs mbuild --cov=mbuild --no-coverage-upload
+          python -m pytest -v --nbval --nbval-lax
         displayName: Run Tests
         
       - bash: |
