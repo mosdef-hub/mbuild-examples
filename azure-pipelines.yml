@@ -55,8 +55,7 @@ jobs:
           conda update --all
           conda create -n test-environment
           source activate test-environment
-          conda install --yes python=$(python.version) --file requirements-dev.txt
-          conda install --yes python=$(python.version) --file requirements-dev.txt
+          conda install numpy mbuild pytest nbval py3Dmol
         displayName: Create Conda env, Activate, Install dependencies, Install Branch
       - bash: |
           source activate test-environment
