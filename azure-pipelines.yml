@@ -57,7 +57,6 @@ jobs:
           source activate test-environment
           conda install --yes python=$(python.version) --file requirements-dev.txt
           conda install --yes python=$(python.version) --file requirements-dev.txt
-          pip install -e .
         displayName: Create Conda env, Activate, Install dependencies, Install Branch
       - bash: |
           source activate test-environment
